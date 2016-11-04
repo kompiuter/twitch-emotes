@@ -1,4 +1,4 @@
-/*Package twitchemote is a wrapper for the unofficial Twitch API's found at
+/*Package twitchemote is a wrapper for the unofficial Twitch APIs found at
 ---> https://twitchemotes.com/apidocs <---
 Functions in this package return information pertaining to Twitch global emotes
 and Twitch emotes obtained from subscriber channels*/
@@ -15,9 +15,7 @@ import (
 // Subscriber calls the subscriber emoticon API and returns a *SubscriberResult
 // which contains all subscriber channels with their emoticons
 func Subscriber() (*SubscriberResult, error) {
-	// subs is the API for retrieving all Subscriber emoticons
 	const subsAPI = "https://twitchemotes.com/api_cache/v2/subscriber.json"
-
 	resp, err := http.Get(subsAPI)
 	if err != nil {
 		return nil, fmt.Errorf("subscriber: %v", err)
@@ -88,9 +86,7 @@ func Subscriber() (*SubscriberResult, error) {
 
 // Global calls the global emoticon API and returns a *GlobalResult which contains all global emoticons
 func Global() (*GlobalResult, error) {
-	// global is the API for retrieving all Global emoticons
 	const globalAPI = "https://twitchemotes.com/api_cache/v2/global.json"
-
 	resp, err := http.Get(globalAPI)
 	if err != nil {
 		return nil, fmt.Errorf("global: %v", err)

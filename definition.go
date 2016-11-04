@@ -51,7 +51,7 @@ type Channel struct {
 	Title         string     `json:"title"`
 }
 
-// Metadata describes the metadata retrieved from the global and subscriber API's
+// Metadata describes the metadata retrieved from the global and subscriber APIs
 type Metadata struct {
 	GeneratedAt time.Time `json:"generated_at"`
 }
